@@ -1,0 +1,26 @@
+{
+  "name": "ai-api-monitor",
+  "version": "1.0.0",
+  "description": "Self-contained, zero-dependency monitor for AI API endpoints. Track model availability, latency, and uptime across any OpenAI-compatible provider.",
+  "type": "module",
+  "main": "src/monitor.js",
+  "scripts": {
+    "start": "node src/monitor.js",
+    "once": "node src/monitor.js --once",
+    "serve": "node src/monitor.js --serve-only"
+  },
+  "keywords": [
+    "ai",
+    "llm",
+    "monitor",
+    "uptime",
+    "openai",
+    "api",
+    "health-check",
+    "dashboard"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

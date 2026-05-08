@@ -1,0 +1,26 @@
+# Config & secrets
+config.json
+.env
+*.env
+*-models.json
+
+# Runtime state
+state/*
+!state/.gitkeep
+
+# Logs
+*.log
+nohup.out
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (even though we have no deps)
+node_modules/

@@ -1,0 +1,41 @@
+{
+  "host": "127.0.0.1",
+  "port": 8791,
+  "intervalMinutes": 60,
+  "rateLimitPerMinute": 8,
+  "requestTimeoutMs": 45000,
+  "stateDir": "./state",
+  "probePrompt": ".",
+  "probeMaxTokens": 1,
+  "systemPrompt": "",
+  "providers": [
+    {
+      "id": "openai",
+      "label": "OpenAI",
+      "baseUrl": "https://api.openai.com/v1",
+      "apiKeyEnv": "OPENAI_API_KEY",
+      "authStyle": "bearer",
+      "wireApi": "chat",
+      "catalogPath": "/models",
+      "chatPath": "/chat/completions",
+      "refreshCatalog": true,
+      "probeKeyCatalogModels": true,
+      "probeOnlyListedForKey": false,
+      "models": ["gpt-4o", "gpt-4o-mini"]
+    },
+    {
+      "id": "custom-proxy",
+      "label": "My Proxy",
+      "baseUrl": "https://my-proxy.example.com/v1",
+      "apiKeyEnv": "CUSTOM_API_KEY",
+      "authStyle": "bearer",
+      "wireApi": "chat",
+      "catalogPath": "/models",
+      "chatPath": "/chat/completions",
+      "refreshCatalog": true,
+      "probeKeyCatalogModels": true,
+      "probeOnlyListedForKey": true,
+      "pruneMissingModels": true
+    }
+  ]
+}
